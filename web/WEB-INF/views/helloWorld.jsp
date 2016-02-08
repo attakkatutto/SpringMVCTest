@@ -6,15 +6,22 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <html ng-app="appSpring">
     <head>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-resource.min.js"></script>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>                
+        <spring:url value="/js/jquery.min.js" var="jquery" />
+        <spring:url value="/js/angular.min.js" var="angularjs" />
+        <spring:url value="/js/angular-resource.min.js" var="angularjsresource" />
+        <spring:url value="/css/bootstrap.min.css" var="bootstrap" />
+        <spring:url value="/css/bootstrap-theme.min.css" var="bootstraptheme" />
+        <spring:url value="/js/bootstrap.min.js" var="bootstrapjs" />
         <spring:url value="/js/appInit.js" var="init" />
-        <script src="${init}"></script>
         <spring:url value="/js/controller/helloController.js" var="controller" />
+        
+        <script src="${jquery}"></script>        
+        <script src="${angularjs}"></script>        
+        <script src="${angularjsresource}"></script>        
+        <link rel="stylesheet" href="${bootstrap}">        
+        <link rel="stylesheet" href="${bootstraptheme}">       
+        <script src="${bootstrapjs}"></script>                        
+        <script src="${init}"></script>        
         <script src="${controller}"></script>
     </head>
     <body>
