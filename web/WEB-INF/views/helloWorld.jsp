@@ -25,20 +25,24 @@
         <script src="${controller}"></script>
     </head>
     <body>
-        <div class="container">
-            <h1>Spring 4.0.2 MVC web service</h1>
-            <h3>Name : ${name}</h3>
-            
-            <div class="panel panel-primary">
-                <div class="panel-heading">Panel Heading</div>
+        <div class="container">            
+            <h3>My Name is : ${name}</h3>            
+            <div class="panel panel-primary" ng-controller="HelloController">
+                <div class="panel-heading">Login</div>
                 <div class="panel-body">
                     <div class="form-group">
-                        <label>Name:</label>
+                        <label>UserName:</label>
                         <input class="form-control" type="text" ng-model="yourName" placeholder="Enter a name here">
-                        <hr>
-                        <h1>Hello {{yourName}}!</h1>
-                        <button class="btn btn-primary">Click me!</button>
+                    </div>  
+                    <div class="form-group">
+                        <label>Password:</label>
+                        <input class="form-control" type="password" ng-model="password" placeholder="Enter your password here">
                     </div>
+                    <div class="form-group">
+                        <h1>Hello <label ng-bind="yourName"/></h1>
+                        <button class="btn btn-primary">Enter!</button>
+                        <button class="btn btn-danger">Cancel</button>
+                    </div>                        
                 </div>
             </div>  
         </div>    

@@ -14,4 +14,8 @@
  * limitations under the License.
  */
 
+app.controller('HelloController', ['$scope', function($scope) {
+  $scope.yourName = '';
+}]);
+
 
