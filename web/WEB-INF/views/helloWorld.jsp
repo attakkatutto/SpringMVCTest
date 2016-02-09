@@ -14,6 +14,7 @@
         <spring:url value="/js/bootstrap.min.js" var="bootstrapjs" />
         <spring:url value="/js/appInit.js" var="init" />
         <spring:url value="/js/controller/helloController.js" var="controller" />
+        <spring:url value="/js/service/loginService.js" var="resource" />
         
         <script src="${jquery}"></script>        
         <script src="${angularjs}"></script>        
@@ -21,7 +22,8 @@
         <link rel="stylesheet" href="${bootstrap}">        
         <link rel="stylesheet" href="${bootstraptheme}">       
         <script src="${bootstrapjs}"></script>                        
-        <script src="${init}"></script>        
+        <script src="${init}"></script>      
+        <script src="${resource}"></script>
         <script src="${controller}"></script>
     </head>
     <body>
@@ -32,15 +34,15 @@
                 <div class="panel-body">
                     <div class="form-group">
                         <label>UserName:</label>
-                        <input class="form-control" type="text" ng-model="yourName" placeholder="Enter a name here">
+                        <input class="form-control" type="text" ng-model="username" placeholder="Enter a name here">
                     </div>  
                     <div class="form-group">
                         <label>Password:</label>
                         <input class="form-control" type="password" ng-model="password" placeholder="Enter your password here">
                     </div>
                     <div class="form-group">
-                        <h1>Hello <label ng-bind="yourName"/></h1>
-                        <button class="btn btn-primary">Enter!</button>
+                        <h1>Hello <label ng-bind="username"/></h1>
+                        <button class="btn btn-primary" ng-click="login()">Enter!</button>
                         <button class="btn btn-danger">Cancel</button>
                     </div>                        
                 </div>

@@ -14,13 +14,11 @@
  * limitations under the License.
  */
 
-app.controller('HelloController', ['$scope', function($scope) {
-  $scope.username = '';
-  $scope.password = '';
-  
-  //$scope.login = function(){
-      //LoginService.login();
-  //};  
-}]);
+//app.factory('LoginService'); //, ['$resource',function($resource){
+//        return $resource('/api/login/', null,
+//        {
+//            login: { method:'GET' }
+//        });
+//}]);
 
 
